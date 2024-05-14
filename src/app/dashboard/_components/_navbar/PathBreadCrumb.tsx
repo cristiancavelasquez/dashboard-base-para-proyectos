@@ -29,8 +29,9 @@ export function PathBreadCrumb() {
           if (index === fullPath.length - 1) {
             return (
               <>
-                <BreadcrumbItem>
+                <BreadcrumbItem >
                   <BreadcrumbLink
+                  key={item}
                     href={
                       index === 0
                         ? `/dashboard`
@@ -47,7 +48,7 @@ export function PathBreadCrumb() {
 
           return (
             <>
-              <BreadcrumbItem>
+              <BreadcrumbItem key={item}>
                 <BreadcrumbLink
                   href={
                     index === 0
